@@ -39,7 +39,7 @@ int main()
 		}
 		else if (input == "SEARCH")
 		{
-			std::cout << "     index|first name|" << std::endl;
+			std::cout << "     index|first name| last name|  nickname|" << std::endl;
 			phonebook.listContacts(&Contact::print);
 		}
 		else if (input == "EXIT")

@@ -4,7 +4,7 @@
 
 void Phonebook::saveContact(Contact *contact)
 {
-	contact[c_num] = *contact;
+	contacts[c_num] = *contact;
 	c_num++;
 }
 
