@@ -1,6 +1,5 @@
-#include "pch.h"
-#include "Phonebook.h"
-#include "Contact.h"
+#include "Phonebook.hpp"
+#include "Contact.hpp"
 
 void Phonebook::saveContact(Contact *contact)
 {
@@ -29,7 +28,7 @@ Phonebook::Phonebook(void)
 
 Phonebook::~Phonebook(void)
 {
-
+	return;
 }
 
 int Phonebook::Limit()
@@ -37,4 +36,18 @@ int Phonebook::Limit()
 	if (c_num >= 7)
 		return (1);
 	return (0);
+}
+
+Contact *Phonebook::getUser(int index)
+{
+	int i;
+
+	i = 0;
+	while (i < c_num)
+	{
+		if (contacts[i].index == index)
+			return (&contacts[i]);
+		i++;
+	}
+	return (NULL);
 }

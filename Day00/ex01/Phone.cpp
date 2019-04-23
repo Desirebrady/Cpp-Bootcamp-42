@@ -1,6 +1,5 @@
-#include "pch.h"
-#include "Phonebook.h"
-#include "Contact.h"
+#include "Phonebook.hpp"
+#include "Contact.hpp"
 #include <iostream>
 #include <string>
 
@@ -8,17 +7,19 @@ int main()
 {
 	Phonebook phonebook;
 	Contact contact;
+	Contact *user;
 	std::string input;
 	int index = 1;
+	int i = 0;
 	while (true)
 	{
-		std::cout << "What can i do for you?\n";
+		std::cout << "What can i do for you?\n" << std::endl;
 		std::cout << "[ADD]New Contact\n";
 		std::cout << "[SEARCH]Search contact\n";
-		std::cout << "[EXIT]Stop the phone\n";
+		std::cout << "[EXIT]Stop the phone\n" << std::endl;
 		std::cout << "your choice : ";
 		std::cin >> input;
-		if (input == "ADD")
+		if (input == "ADD" || input == "add")
 		{	
 			if (phonebook.Limit() == 1)
 			{
@@ -37,12 +38,22 @@ int main()
 				index++;
 			}
 		}
-		else if (input == "SEARCH")
+		else if (input == "SEARCH" || input == "search")
 		{
 			std::cout << "     index|first name| last name|  nickname|" << std::endl;
 			phonebook.listContacts(&Contact::print);
+			std::cout << "Enter index to get more info" << std::endl;
+			int search;
+			std::cin >> search;
+
+			if (user = phonebook.getUser(search))
+			{
+				std::cout << "     index|first name| last name|  nickname|" << std::endl;
+				user->print();
+			}
+			std::cout << "\n" << std::endl;
 		}
-		else if (input == "EXIT")
+		else if (input == "EXIT" || input == "exit")
 		{
 			return (0);
 		}
