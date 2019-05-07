@@ -16,9 +16,9 @@ public:
     Fixed &operator = (const Fixed &fp);
     bool operator>(const Fixed &fp) const;
     bool operator<(const Fixed &fp) const;
-    bool operator+(const Fixed &fp) const;
-    bool operator-(const Fixed &fp) const;
-    bool operator*(const Fixed &fp) const;
+    Fixed operator+(const Fixed &fp) const;
+    Fixed operator-(const Fixed &fp) const;
+    Fixed operator*(const Fixed &fp) const;
     bool operator/(const Fixed &fp) const;
     bool operator>=(const Fixed &fp) const;
     bool operator<=(const Fixed &fp) const;

@@ -90,21 +90,21 @@ Fixed::operator!=(const Fixed &fp) const
     return(this->_fp_value != fp._fp_value);
 }
 
-bool
+Fixed
 Fixed::operator+(const Fixed &fp) const
 {
-    return(this->_fp_value + fp._fp_value);
+    return(Fixed(this->toFloat() + fp.toFloat()));
 }
-bool
+Fixed
 Fixed::operator-(const Fixed &fp) const
 {
-    return(this->_fp_value - fp._fp_value);
+    return(Fixed(this->toFloat() - fp.toFloat()));
 }
 
-bool
+Fixed
 Fixed::operator*(const Fixed &fp) const
 {
-    return((float)this->_fp_value * fp._fp_value);
+    return(Fixed(this->toFloat() * fp.toFloat()));
 }
 bool
 Fixed::operator/(const Fixed &fp) const
