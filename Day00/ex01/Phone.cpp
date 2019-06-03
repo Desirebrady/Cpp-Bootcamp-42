@@ -33,6 +33,8 @@ int main()
 				std::cin >> contact.last_name;
 				std::cout << "Please enter your nickname\n";
 				std::cin >> contact.nickname;
+				std::cout << "Please enter your login\n";
+				std::cin >> contact.nickname;
 				contact.index = index;
 				phonebook.saveContact(&contact);
 				index++;
@@ -45,12 +47,9 @@ int main()
 			std::cout << "Enter index to get more info" << std::endl;
 			int search;
 			std::cin >> search;
-
-			if (user = phonebook.getUser(search))
-			{
-				std::cout << "     index|first name| last name|  nickname|" << std::endl;
-				user->print();
-			}
+			i = search;
+			if ((user = phonebook.getUser(search)))
+				user->userInfo();
 			std::cout << "\n" << std::endl;
 		}
 		else if (input == "EXIT" || input == "exit")

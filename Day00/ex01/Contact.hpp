@@ -8,6 +8,7 @@ public:
 	char first_name[25];
 	char last_name[25];
 	char nickname[25];
+	char login[25];
 	int index;
 	Contact();
 	~Contact();

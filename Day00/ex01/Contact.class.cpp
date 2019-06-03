@@ -75,16 +75,16 @@ void	Contact::print(void) {
 
 void Contact::userInfo()
 {
-	std::cout << first_name << std::endl;
-	std::cout << last_name << std::endl;
-	std::cout << nickname << std::endl;
-	//std::cout << login << std::endl;
-	//std::cout << postal_adress << std::endl;
-	//std::cout << email_adress << std::endl;
-	//std::cout << phone_number << std::endl;
-	//std::cout << birthday << std::endl;
-	//std::cout << favorite_meal << std::endl;
-	//std::cout << underwear_color << std::endl;
-	//std::cout << darkest_secret << std::endl;
+	std::cout << "[First Name] " << first_name << std::endl;
+	std::cout << "[last Name ] " << last_name << std::endl;
+	std::cout << "[Nickname  ] " << nickname << std::endl;
+	std::cout << "[login     ] " << login << std::endl;
+	std::cout << "[Postal adr] " << postal_adress << std::endl;
+	std::cout << "[email     ] " << email_adress << std::endl;
+	std::cout << "[Number    ] " << phone_number << std::endl;
+	std::cout << "[Birthday  ] " << birthday << std::endl;
+	std::cout << "[loved food] " << favorite_meal << std::endl;
+	std::cout << "[Underwear ] " << underwear_color << std::endl;
+	std::cout << "[Secret    ] " <<darkest_secret << std::endl;
 
 }
